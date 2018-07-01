@@ -1,0 +1,220 @@
+<!--
+  ~ /*
+  ~  * PROJECT LICENSE
+  ~  *
+  ~  * This project was submitted by Beatriz Ovejero as part of the Android Developer
+  ~  * Nanodegree at Udacity.
+  ~  *
+  ~  * As part of Udacity Honor code, your submissions must be your own work, hence
+  ~  * submitting this project as yours will cause you to break the Udacity Honor Code
+  ~  * and the suspension of your account.
+  ~  *
+  ~  * As author of the project, I allow you to check it as a reference, but if you submit it
+  ~  * as your own project, it's your own responsibility if you get expelled.
+  ~  *
+  ~  * Copyright (c) 2018 Beatriz Ovejero
+  ~  *
+  ~  * Besides the above notice, the following license applies and this license notice must be
+  ~  * included in all works derived from this project.
+  ~  *
+  ~  * MIT License
+  ~  *
+  ~  * Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~  * of this software and associated documentation files (the "Software"), to deal
+  ~  * in the Software without restriction, including without limitation the rights
+  ~  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~  * copies of the Software, and to permit persons to whom the Software is
+  ~  * furnished to do so, subject to the following conditions:
+  ~  *
+  ~  * The above copyright notice and this permission notice shall be included in all
+  ~  * copies or substantial portions of the Software.
+  ~  *
+  ~  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~  * SOFTWARE.
+  ~  */
+  -->
+
+<resources>
+
+    <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Bacon.Detail" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <!-- Article List Activity Styles -->
+    <style name="root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="appBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="toolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_marginLeft">@dimen/list_toolbar_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/list_toolbar_side_margin</item>
+    </style>
+
+    <style name="imageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/logo</item>
+    </style>
+
+    <style name="swipe_refresh_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="recycler_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+
+    <!-- Article Detail Fragment Styles -->
+    <style name="draw_insets_frame_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="appBar_fragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/detail_photo_height</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:elevation">@dimen/app_bar_elevation</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="collapsingToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/text_inv</item>
+    </style>
+
+    <style name="frameLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="photo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/detail_photo_height</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="view_fragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/photo_background_protection</item>
+    </style>
+
+    <style name="toolBar_fragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/toolbar_height</item>
+    </style>
+
+    <style name="scrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="article_body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/source_sans_pro_light</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textColorLink">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/text_l</item>
+    </style>
+
+    <style name="fab_share">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/margin_l</item>
+        <item name="android:elevation">@dimen/fab_elevation</item>
+        <item name="android:src">@drawable/ic_share</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+
+    </style>
+
+    <!-- Article Item List Styles -->
+    <style name="cardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_s</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+
+    <style name="linear_layout_list_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="thumbnail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/tree_dummy_pic</item>
+        <item name="android:background">@color/photo_placeholder</item>
+        <item name="android:transitionName">@string/article_transition</item>
+    </style>
+
+    <style name="article_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:paddingBottom">@dimen/margin_s</item>
+        <item name="android:paddingLeft">@dimen/margin_l</item>
+        <item name="android:paddingTop">@dimen/margin_l</item>
+        <item name="android:paddingRight">@dimen/margin_l</item>
+        <item name="android:textSize">@dimen/text_l</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="article_subtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/roboto_italic</item>
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingBottom">@dimen/margin_l</item>
+        <item name="android:paddingLeft">@dimen/margin_l</item>
+        <item name="android:paddingRight">@dimen/margin_l</item>
+        <item name="android:textSize">@dimen/text_m</item>
+    </style>
+
+</resources>
